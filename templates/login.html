@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Reservado ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Ajustes específicos para a tela de login ficar centralizada na vertical */
+        body, html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--rosa-principal);
+            box-shadow: 0 0 20px var(--rosa-glow);
+            width: 90%;
+            max-width: 400px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid var(--rosa-principal);
+            background: #1a1a1a;
+            color: white;
+            font-family: var(--fonte-auxiliar);
+            box-sizing: border-box;
+        }
+        button {
+            background-color: var(--rosa-principal);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: var(--fonte-auxiliar);
+            font-weight: bold;
+            box-shadow: 0 0 10px var(--rosa-glow);
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--rosa-principal);
+        }
+        .erro {
+            color: #ffcc00;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-family: var(--fonte-auxiliar);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>{{ pergunta }}</h2>
+        
+        <form method="POST">
+            <input type="text" name="resposta" placeholder="Digite aqui..." required autocomplete="off">
+            <button type="submit">Entrar</button>
+        </form>
+
+        {% if erro %}
+            <p class="erro">{{ erro }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:wght@300;400&display=swap');
+
+:root {
+    --rosa-principal: #ff4d94;
+    --rosa-glow: #ff0066;
+    --fundo-escuro: #0d0d0d;
+    --fonte-carta: 'Dancing Script', cursive;
+    --fonte-aux: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--fundo-escuro);
+    color: white;
+    font-family: var(--fonte-carta);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.secao-texto p {
+    /* Altere o valor abaixo para aumentar o tamanho */
+    font-size: 1.5rem; 
+    
+    /* Outros ajustes que ajudam na leitura de fontes grandes */
+    line-height: 1.0;   /* Espaçamento entre as linhas */
+    margin-bottom: 30px; /* Espaço entre os parágrafos */
+}
+
+/* 1. Criando o Layout de Três Colunas com Grid */
+.wrapper-carta {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* Largura fixa nas laterais, flexível no centro */
+    gap: 40px; /* Espaço entre as colunas */
+    align-items: start; /* Alinha as fotos no topo */
+    margin-top: 50px;
+}
+
+/* 2. O Estilo do "Papel" da Carta */
+.papel-carta {
+    background-color: #1a1a1a; /* Um cinza muito escuro e elegante */
+    padding: 60px 40px;
+    border-radius: 20px; /* Bordas arredondadas para suavidade */
+    border: 2px solid var(--rosa-principal); /* Borda rosa fina */
+    box-shadow: 0 0 30px rgba(255, 77, 148, 0.3); /* Brilho rosa suave e envolvente */
+}
+
+/* 3. Estilizando as Fotos Laterais */
+.fotos-laterais {
+    display: flex;
+    flex-direction: column; /* Fotos uma abaixo da outra */
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 3px solid var(--rosa-principal);
+    box-shadow: 0 0 20px var(--rosa-glow);
+    transition: transform 0.6s ease;
+}
+
+.fotos-laterais:hover {
+    transform: rotate(3s) scale(1.05); /* Pequena inclinação e zoom ao passar o mouse */
+}
+
+.foto-lateral {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 77, 148, 0.5); /* Borda rosa mais sutil nas laterais */
+    transition: transform 0.3s ease;
+}
+
+.foto-lateral:hover {
+    transform: rotate(3s) scale(1.05); /* Pequena inclinação e zoom ao passar o mouse */
+}
+
+/* Estilo para as fotos de destaque */
+.foto-destaque-container {
+    margin: 80px 0;
+}
+
+.foto-destaque {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 3px solid var(--rosa-principal);
+    box-shadow: 0 0 20px var(--rosa-glow);
+    transition: transform 0.6s ease;
+}
+
+.foto-destaque:hover {
+    transform: scale(1.05);
+}

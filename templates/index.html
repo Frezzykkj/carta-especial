@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Você ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <section class="wrapper-carta">
+
+            <aside class="fotos-laterais esquerda">
+                <img src="{{ url_for('static', filename='imagens/foto1.jpg') }}" class="foto-lateral">
+                <img src="{{ url_for('static', filename='imagens/foto3.jpg') }}" class="foto-lateral">
+            </aside>
+
+            <main class="papel-carta">
+                <section class="secao-texto">
+                    <p>Oi minha princesa, espero que vc esteja bem! eu so queria te falar que 
+                        esses ultimos dias tem sido incríveis com você (como sempre). Voce é uma pessoa incrivel
+                        e eu nunca me canso de falar isso, de falar o quão perfeita você é pra mim
+                        tudo que eu mais quero é ter a nossa casa, com nosso quartinho com nosso PCs
+                        os cachorros passeando pela casa e futuramente uma copia nossa tbm. conseguimos passar por tantas coisas 
+                        juntos e agora temos um ao outro. Pode contar comigo pra tudo meu amor, eu te amo demais, e quero passar o 
+                        resto da minha vida com vc, obrigado por ser a melhor namorada do mundo. Eu amo seu jeitinho, seu sorriso, seu olhar
+                        TUDO em vc é lindo, e eu vou pensar assim mesmo no dias que voce nao achar o mesmo, eu vou te amar do jeitinho que você é
+                        pra sempre, vou cuidar de voce mesmo quando nao tiver forçar pra sair da cama, e vou te amar o dobro quando voce nao conseguir
+                        fazer isso tambem, eu so quero te ver feliz, porque o que importa é a sua felicidade, é ver vc feliz comigo
+                        cozinhando um brigadeiro queimado, fazendo um macarrão com atum em um almoço de domingo, ou entao deitados assistindo series e filmes 
+                        tudo com vc é incrivel. EU TE AMO DEMAIS, BEIJÃO MINHA NENEM LINDA
+                    </p>
+                </section>
+            </main>
+
+        
+
+        <aside class="fotos-laterais direita">
+            <img src="{{ url_for('static', filename='imagens/foto2.jpg') }}" class="foto-lateral">
+            <img src="{{ url_for('static', filename='imagens/foto4.jpg') }}" class="foto-lateral">
+            <img src="{{ url_for('static', filename='imagens/foto5.jpg') }}" class="foto-lateral">
+        </aside>
+
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.secao-texto, .foto-destaque-container, .fotos-laterais, .foto-lateral', {
+        delay: 300,        // Espera um pouco antes de começar
+        distance: '50px',   // Vem de 50px abaixo
+        duration: 1200,     // A animação dura 1.2 segundos (um pouco mais lenta fica mais elegante)
+        origin: 'bottom',   // Vem de baixo
+        interval: 200       // Se houver vários itens (como as fotos laterais), espera 200ms entre eles
+    });
+    </script>
+</body>
+</html>
