@@ -13,6 +13,25 @@ html, body {
     margin: 0;
 }
 
+.login-box h2 {
+    font-size: 2.2rem; /* Aumente este valor conforme desejar */
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid var(--rosa-principal);
+    background: #1a1a1a;
+    color: white;
+    font-family: var(--fonte-aux); /* Garante que usa a Montserrat ou Arial */
+    font-size: 1.2rem; /* Tamanho da letra enquanto ela digita */
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--fundo-escuro);
     color: white;
